@@ -8968,4 +8968,31 @@ svg.solid {
         </div>
     </div>
 
+    <div class="cm-mirracle-go-top active" style="cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><polyline fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="44,34 24,14 4,34 " stroke-linejoin="miter"></polyline></g></svg>
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const goTopBtn = document.querySelector(".cm-mirracle-go-top");
+
+  // Show button after scrolling
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      goTopBtn.style.display = "flex";
+    } else {
+      goTopBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to top when clicked
+  goTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+});
+</script>
 </footer>
