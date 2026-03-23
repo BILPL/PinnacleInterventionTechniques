@@ -198,7 +198,12 @@ console.log("🚀 Build started");
 cleanDir(BUILD);
 
 /* COPY ASSETS */
-copyDir(ASSETS, path.join(BUILD, "assets"));
+//copyDir(ASSETS, path.join(BUILD, "assets"));
+const buildAssets = path.join(BUILD, "assets");
+if (!fs.existsSync(buildAssets)) {
+  fs.symlinkSync(ASSETS, buildAssets, "dir");
+  console.log("✔ Assets symlinked (no disk copy)");
+}
 console.log("✔ Assets copied");
 
 /* LOAD TEMPLATE PARTS */
