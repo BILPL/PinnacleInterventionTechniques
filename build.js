@@ -62,7 +62,7 @@ function buildPdfViewer(pageName, totalPages = 20) {
   for (let i = 1; i <= totalPages; i++) {
     const index = String(i).padStart(2, "0"); // 01, 02, ...
     out += `  <div class="page">
-    <img src="https://interventions.pinnacleblooms.org/Assets/${pageName}-${index}.jpg"
+    <img src="https://materials.pinnacleblooms.org/Assets/${pageName}-${index}.jpg"
          loading="lazy"
          alt="Page ${i}">
   </div>\n`;
