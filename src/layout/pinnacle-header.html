@@ -29,6 +29,17 @@ li,ul{margin:0;padding:0;list-style:none}
 @media(min-width:768px){.cm-container{width:750px}}
 @media(min-width:992px){.cm-container{width:970px}}
 @media(min-width:1200px){.cm-container{width:1170px}}
+.pdf-viewer {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: flex-start;
+}
+  .page {min-width: 85vw;display: flex;justify-content: center;overflow: visible;}
+  .page img {max-width: 100%;height: auto;display: block;}
+   @media (max-width: 768px) { .page { min-width: 85vw; } }
 .cm-h-tb-left{float:left;padding:0 0;padding-top:5px}
 .cm-h-tb-left img{width:459px;margin-left:-11px;float:left;position:absolute;margin-top:-5px;z-index:9999}
 .cm-h-tb-right{float:right;position: relative;left: 37px;}
