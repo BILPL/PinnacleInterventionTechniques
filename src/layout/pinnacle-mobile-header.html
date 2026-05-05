@@ -97,6 +97,18 @@ body {
   min-height: 50px;                 /* set to actual rendered height */
   overflow: hidden;
 }
+
+.pdf-viewer {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  align-items: flex-start;
+}
+  .page {min-width: 85vw;display: flex;justify-content: center;overflow: visible;}
+  .page img {max-width: 100%;height: auto;display: block;}
+   @media (max-width: 768px) { .page { min-width: 85vw; } }
     </style>
 </head>
 <body>
