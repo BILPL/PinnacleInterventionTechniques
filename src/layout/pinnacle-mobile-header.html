@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.5">
+    <title>Pinnacle Blooms Network - Mobile Header Component</title>
+
+    <!-- Google Fonts -->
+    
+    <!-- Mobile Styles -->
+    <style>
+
+
+/* ===== MOBILE HEADER SPECIFIC FIXES ===== */
+
+/* Nav menu - make it a proper overlay instead of anchor-based */
+.nav-fmenu {
+    display: none;
+    position: fixed;
+    top: 5.2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 99999998;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.nav-fmenu.active {
+    display: block;
+}
+
+/* Fix the layout-header to show properly */
+.layout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 5.2rem;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+}
+
+/* Body offset for fixed header */
+body {
+    margin-top: 5.2rem;
+    background: #fff !important;
+}
+
+/* Hamburger button styling */
+.right-section {
+    font-size: 30px;
+    padding-right: 5px;
+}
+.right-section a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* SVG icon in services menu fix */
+.content.services .cm-menu-text svg {
+    margin-right: 6px;
+}
+.content.services .cm-menu-text:after {
+    border: 1px solid #333;
+    border-radius: 50%;
+    content: "";
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 7px;
+    left: -6px;
+    display: inline-block;
+}
+
+/* Scrollbar styling for menu */
+.nav-fmenu::-webkit-scrollbar {
+    width: 4px;
+}
+.nav-fmenu::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 2px;
+}
+
+[class*="animatable-on-load"] {
+  contain: layout style;
+  will-change: opacity, transform;   /* compositor-only — no reflow */
+  transform: translateZ(0);
+}
+
+.node-labelGroup {
+  min-height: 50px;                 /* set to actual rendered height */
+  overflow: hidden;
+}
+    </style>
+</head>
+<body>
+    <!-- Fixed Top Header Bar -->
+    <div class="layout-header">
+        <div class="left-section">
+            <a class="layout-menu" href="javascript:void(0)" title="explore pinnacle blooms network" aria-label="explore pinnacle blooms network menu" onclick="toggleMenu()">
+                <svg role="img" aria-label="explore pinnacle blooms network" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
+                    <polyline fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="28,7 31,7 31,29 1,29 1,7 4,7"></polyline>
+                    <line fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" x1="16" y1="7" x2="16" y2="25"></line>
+                    <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M16,7c0,0-2.167-4-12-4v18 c6.937,0,12,4,12,4s4.812-4,12-4V3C18.083,3,16,7,16,7z"></path>
+                </svg>
+            </a>
+            <a class="layout-logo" href="https://www.pinnacleblooms.org/" title="Pinnacle Blooms Network">
+                <img src="https://www.pinnacleblooms.org/images/Pinnacle-Logo.png?v=1" alt="Pinnacle Logo" height="51.64" width="260px">
+            </a>
+        </div>
+        <div class="right-section">
+            <a href="javascript:void(0)" title="click here for the menu" onclick="toggleMenu()">
+                <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: block;">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Full-Screen Navigation Menu -->
+
+    <div class="nav-fmenu" id="pinnacle-blooms-network-menu">
+
+        <a href="https://www.pinnacleblooms.org/">Pinnacle Blooms Network</a>
+        <div class="fmenu-cont">
+            <a href="#pinnacle-top" title="Back To Top" class="" style="/* float: right; */width: 100%;position: relative;left: 86px;">
+                <i class="fa-regular fa-angle-up" style="color:#000;float: right;font-size: 30px;position: relative;top: 20px;">
+                    <span style="
+    font-size: 20px;
+    position: relative;
+    top: -7px;
+    right: 120px;
+">back to top</span>
+                </i>
+            </a>
+            <h3 class="fmenu-title">About Us</h3>
+            <div class="content">
+
+                <a class="cm-menu-text" title="vision" href="https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate">Vision</a>
+                <a class="cm-menu-text" title="Mission" href="https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate">Mission</a>
+                <a class="cm-menu-text" title="About" href="https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate">About</a>
+                <a class="cm-menu-text" title="BHCL P LIMITED" href="https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate#bhclpl">BHCL P LIMITED</a>
+                <a class="cm-menu-text" title="KGV R&D P LIMITED" href="https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate#kgv">KGV R&D P LIMITED</a>
+                <a class="cm-menu-text" title="KGV R&D P LIMITED" href="tel:9100181181">
+                    <svg class="icon">
+                        <use xlink:href="/Images/allsvgsprites.svg#call"></use>
+                    </svg>
+                    9100 181 181
+                </a>
+                <a class="cm-menu-text" title="Scientifically designed therapy framework for every nation, language, and socioeconomic tier" href="https://www.pinnacleblooms.org/pinnacle-global-autism-framework">Global Autism Framework</a>
+            </div>
+            <h3 class="fmenu-title">I am Here To</h3>
+            <div class="content ">
+
+                <a class="cm-menu-text" title="Login" href="https://mirracle.pinnacleblooms.org/epass">Login</a>
+
+                <a data-testid="mobile-nav-item" class="cm-menu-text" href="https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india" title="Enroll My Kid">Enroll My Kid</a>
+                <a data-testid="mobile-nav-item" class="cm-menu-text" href="https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources" title="Download Resources">Download Resources</a>
+                <a data-testid="mobile-nav-item" class="cm-menu-text" href="https://www.pinnacleblooms.org/speech-aba-autism-assessments" title="Assessments">Assessments</a>
+                <a data-testid="mobile-nav-item" class="cm-menu-text" href="https://www.pinnacleblooms.org/certified-courses" title="Certification Courses">Certification Courses</a>
+                <a data-testid="mobile-nav-item" class="cm-menu-text" href="https://www.pinnacleblooms.org/careers" title="careers">Careers</a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7" title="contact us">Contact Us</a>
+                <a class="cm-menu-text" href="https://login.microsoft.com" title="staff web mail">Staff Web Mail</a>
+            </div>
+            <h3 class="fmenu-title"><a href="https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate" title="Services">Therapy Services</a></h3>
+            <div class="content services">
+
+                <a class="cm-menu-text" title="Autism therapy" href="https://www.pinnacleblooms.org/autism-therapy">
+
+                    <svg class="icon">
+                        <use xlink:href="/Images/allsvgsprites.svg#autism-therapy"></use>
+                    </svg>
+
+                    Autism therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Autism therapy" href="https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate">
+
+                    <svg class="icon">
+                        <use xlink:href="/Images/allsvgsprites.svg#speech-therapy"></use>
+                    </svg>
+
+                    Speech therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Applied Behavior Analysis therapy" href="https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><circle cx="5" cy="3" r="2" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle><path d="M5,8c-2.209,0-4,1.791-4,4H9c0-2.209-1.791-4-4-4Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><circle cx="19" cy="14" r="2" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle><path d="M19,19c-2.209,0-4,1.791-4,4h8c0-2.209-1.791-4-4-4Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><path d="M4,16v2c0,.552,.448,1,1,1h6" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path><polyline points="9 22 12 19 9 16" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></polyline><path d="M20,8v-2c0-.552-.448-1-1-1h-7s1,0,1,0" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path><polyline points="15 2 12 5 15 8" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></polyline></g></svg>
+
+                    ABA Therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Dance therapy" href="https://www.pinnacleblooms.org/dance-therapy">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><polyline data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" points="17.873,11.81 22,20 18,19 16,22 12.725,14.963 " stroke-linejoin="miter" stroke-linecap="butt"></polyline> <polyline data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" points="6.127,11.81 2,20 6,19 8,22 11.275,14.963 " stroke-linejoin="miter" stroke-linecap="butt"></polyline> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="8" r="7" stroke-linejoin="miter"></circle> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="8" r="2" stroke-linejoin="miter"></circle></g></svg>
+
+                    Dance Therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Yoga therapy" href="https://www.pinnacleblooms.org/yoga-therapy">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path data-color="color-2" d="M3.952,19.889a5.806,5.806,0,0,1-2.2-2.289c-1.9-3.2.4-11.6.4-11.6s.728.208,1.8.571" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path> <path data-color="color-2" d="M20.048,6.571c1.072-.363,1.8-.571,1.8-.571s2.3,8.4.4,11.6a5.806,5.806,0,0,1-2.2,2.289" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path> <path d="M5,13.717C5,9.283,12,2,12,2s7,7.283,7,11.717a7.005,7.005,0,1,1-14,0Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg>
+
+                    Yoga Therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Hydro therapy" href="https://www.pinnacleblooms.org/hydro-therapy">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><circle cx="13" cy="8" r="2" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle> <circle cx="6" cy="3" r="2" fill="#444444" data-cap="butt" data-color="color-2" data-stroke="none" stroke-linecap="butt" stroke-linejoin="miter"></circle> <path d="M20,16l-6-2L8,12,3,6" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path> <path d="M1,22a6.985,6.985,0,0,0,5.5-2.679,6.985,6.985,0,0,0,11,0A6.985,6.985,0,0,0,23,22" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path> <line x1="8" y1="12" x2="7" y2="15" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line> <line x1="13" y1="17" x2="14" y2="14" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line></g></svg>
+
+                    Hydro Therapy
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Music therapy" href="https://www.pinnacleblooms.org/music-therapy">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="8" y1="7" x2="23" y2="7" stroke-linejoin="miter"></line> <polyline data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" points="23,17.5 23,1 8,1 8,19.5 " stroke-linejoin="miter" stroke-linecap="butt"></polyline> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="4.5" cy="19.5" r="3.5" stroke-linejoin="miter"></circle> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="19.5" cy="17.5" r="3.5" stroke-linejoin="miter"></circle></g></svg>
+
+                    Music therapy
+                </a>
+
+
+                <a class="cm-menu-text" title="Group Teaching" href="https://www.pinnacleblooms.org/group-teaching">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><rect x="8" y="6" width="8" height="5" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></rect><path d="M10,6V3c0-1.1,.9-2,2-2h0c1.1,0,2,.9,2,2v3" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path><path d="M5.5,18h0c-2.485,0-4.5,2.015-4.5,4.5v.5H10v-.5c0-2.485-2.015-4.5-4.5-4.5Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><path d="M7.5,14c-.456,.607-1.182,1-2,1-1.381,0-2.5-1.119-2.5-2.5,0-1.209,.859-2.218,2-2.45" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" data-cap="butt" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M16.5,14c.456,.607,1.182,1,2,1,1.381,0,2.5-1.119,2.5-2.5,0-1.209-.859-2.218-2-2.45" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" data-cap="butt" stroke-linecap="butt" stroke-linejoin="miter"></path><path d="M18.5,18h0c-2.485,0-4.5,2.015-4.5,4.5v.5h9v-.5c0-2.485-2.015-4.5-4.5-4.5Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg>
+
+                    Group Teaching
+                </a>
+
+
+                <a class="cm-menu-text" title="Parent Training" href="https://www.pinnacleblooms.org/parent-training">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><circle cx="7" cy="11" r="3" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></circle><circle cx="16" cy="5" r="4" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle><path d="M17,23h6v-4c0-3.866-3.134-7-7-7-1.074,0-2.091,.242-3,.674" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><path d="M7,17c-3.314,0-6,2.686-6,6H13c0-3.314-2.686-6-6-6Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path></g></svg>
+
+                    Parent Training
+                </a>
+
+
+                <a class="cm-menu-text" title="Teacher Training" href="https://www.pinnacleblooms.org/teacher-training">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line x1="8" y1="11" x2="8" y2="23" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" data-cap="butt" stroke-linecap="butt" stroke-linejoin="miter"></line> <line x1="16" y1="11" x2="16" y2="23" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" data-cap="butt" stroke-linecap="butt" stroke-linejoin="miter"></line> <path d="M19,18l1.491-2.237a1,1,0,0,0-.207-1.336L16,11H8L3.716,14.427a1,1,0,0,0-.207,1.336L5,18" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path> <circle cx="12" cy="4" r="3" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle></g></svg>
+
+                    Teacher Training
+                </a>
+
+
+                <a class="cm-menu-text" title="School Training" href="https://www.pinnacleblooms.org/school-training">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="11" cy="13" r="9" stroke-linejoin="miter"></circle> <path data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d=" M21.955,18.005c1.089,2.145,1.378,3.816,0.622,4.572C20.92,24.234,14.799,20.799,9,15S-0.234,3.08,1.423,1.423 C2.18,0.666,3.853,0.956,6,2.047" stroke-linejoin="miter"></path></g></svg>
+                    School Training
+                </a>
+
+
+
+
+
+                <a class="cm-menu-text" title="special education therapy" href="https://www.pinnacleblooms.org/best-special-education-center-call-9100181181">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" x1="12" y1="4" x2="12" y2="21" stroke-linejoin="miter" stroke-linecap="butt"></line> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M17.5,2c-3,0-5.5,1.3-5.5,3 c0-1.7-2.5-3-5.5-3S1,3.3,1,5v17c0-1.7,2.5-3,5.5-3s5.5,1.3,5.5,3c0-1.7,2.5-3,5.5-3s5.5,1.3,5.5,3V5C23,3.3,20.5,2,17.5,2z" stroke-linejoin="miter"></path></g></svg>
+
+                    special education
+                </a>
+                <a class="cm-menu-text full" title="Occupational therapy" href="https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate">
+
+                    <svg class="icon">
+                        <use xlink:href="/Images/allsvgsprites.svg#occupational-therapy"></use>
+                    </svg>
+
+                    Occupational Therapy
+                </a>
+
+                <a class="cm-menu-text full" title="Psychological Counseling therapy" href="https://www.pinnacleblooms.org/child-psychological-counseling">
+
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path d="M19,21h4V16.677a1,1,0,0,0-.629-.928l-3.742-1.5A1,1,0,0,1,18,13.323v-.878A3.982,3.982,0,0,0,20,9V7a4,4,0,0,0-6-3.465" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path> <path d="M14.371,16.749l-3.742-1.5A1,1,0,0,1,10,14.323v-.451C13.27,13.435,14,12,14,12s-2-2-2-4A4,4,0,0,0,4,8c0,2-2,4-2,4s.73,1.435,4,1.872v.451a1,1,0,0,1-.629.928l-3.742,1.5A1,1,0,0,0,1,17.677V21H15V17.677A1,1,0,0,0,14.371,16.749Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg>
+
+                    Psychological Counseling
+                </a>
+
+            </div>
+            <h3 class="fmenu-title">
+                <a href="https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate" title="Services">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><rect data-color="color-2" x="5" y="12" width="18" height="15" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></rect><line data-color="color-2" x1="27" y1="12" x2="27" y2="14" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line><line data-color="color-2" x1="27" y1="18" x2="27" y2="27" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line><line data-cap="butt" x1="12" y1="3" x2="16" y2="8" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></line><line data-cap="butt" x1="16" y1="8" x2="22" y2="1" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></line><rect x="1" y="8" width="30" height="23" rx="3" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></rect></g></svg>
+                    <span class="menu-side-title">Pinnacle TV</span>
+                </a>
+            </h3>
+            <div class="content">
+
+                <a class="cm-menu-text live" title="Live TV" href="https://www.youtube.com/pinnaclebloomsnetwork">
+
+                    <svg style="top: 3px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16"><g transform="translate(0, 0)"><g class="nc-loop_ripples-16"> <circle fill="#444444" cx="8" cy="8" r="8" transform="translate(0.8586533333330104 0.8586533333330104) scale(0.8926683333333737)" style="opacity:0.5366583333331315;"></circle> </g> <script type="2b091498af1cd601b7ae221f-text/javascript">!function () { function t(t) { this.element = t, this.circle = this.element.getElementsByTagName("circle")[0], this.animationId, this.start = null, this.init() } if (!window.requestAnimationFrame) { var i = null; window.requestAnimationFrame = function (t, n) { var e = (new Date).getTime(); i || (i = e); var a = Math.max(0, 16 - (e - i)), r = window.setTimeout(function () { t(e + a) }, a); return i = e + a, r } } t.prototype.init = function () { var t = this; this.animationId = window.requestAnimationFrame(t.triggerAnimation.bind(t)) }, t.prototype.reset = function () { var t = this; window.cancelAnimationFrame(t.animationId) }, t.prototype.triggerAnimation = function (t) { var i = this; this.start || (this.start = t); var n = t - this.start, e = Math.min(n / 800, 1); 800 > n || (this.start = this.start + 800); var a = .3 + 5 * e / 7; if (.3 + e > 1) (a = .8 + 2 * (e - .7) / 3); var r = 8 * (1 - (a = Math.min(a, 1))), o = 8 * (1 - a), s = 10 * e / 7; if (.3 + e > 1) (s = Math.max(1 - 10 / 3 * (e - .7), 0)); this.circle.setAttribute("transform", "translate(" + r + " " + o + ") scale(" + a + ")"), this.circle.setAttribute("style", "opacity:" + s + ";"); if (document.documentElement.contains(this.element)) window.requestAnimationFrame(i.triggerAnimation.bind(i)) }; var n = document.getElementsByClassName("nc-loop_ripples-16"), e = []; if (n) for (var a = 0; n.length > a; a++)!function (i) { e.push(new t(n[i])) }(a); document.addEventListener("visibilitychange", function () { "hidden" == document.visibilityState ? e.forEach(function (t) { t.reset() }) : e.forEach(function (t) { t.init() }) }) }();</script></g></svg>
+
+                    Live TV
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Center Tour" href="https://www.youtube.com/watch?v=Z9BveMDW4qc&list=PL0lwT9W0zVphe-a_OUYhYl1NTiyfAW0pD">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><polyline fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="12,7 12,1 16,1 16,3 12,3 " stroke-linejoin="miter"></polyline> <rect data-color="color-2" data-stroke="none" x="11" y="12" fill="#444444" width="2" height="2"></rect> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 14,23 14,18 10,18 10,23 " stroke-linejoin="miter"></polyline> <rect data-color="color-2" data-stroke="none" x="4" y="15" fill="#444444" width="2" height="2"></rect> <rect data-color="color-2" data-stroke="none" x="18" y="15" fill="#444444" width="2" height="2"></rect> <polygon fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="17,11 12,7 7,11 1,11 1,23 23,23 23,11 " stroke-linejoin="miter"></polygon></g></svg>
+
+                    Center Tour
+                </a>
+
+
+
+
+                <a class="cm-menu-text" title="Why Pinnacle" href="https://www.youtube.com/watch?v=aRQphTyPnx4&list=PL0lwT9W0zVphxHFQ2gESGHx7UAFkwWSgh">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 8,16 8,23 20,23 20,17 " stroke-linejoin="miter"></polyline> <circle data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="20" cy="14" r="3" stroke-linejoin="miter"></circle> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M11,2h2.8 c0.6,0,1.1,0.5,1,1.1l-1.6,11.1c-0.1,1-1,1.7-2,1.7H4.7c-1,0-1.8-0.7-2-1.7L1.2,3.1C1.1,2.5,1.5,2,2.2,2H5" stroke-linejoin="miter"></path> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="1" x2="5" y2="3" stroke-linejoin="miter"></line> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="11" y1="1" x2="11" y2="3" stroke-linejoin="miter"></line></g></svg>
+
+                    Why Pinnacle
+                </a>
+
+
+                <a class="cm-menu-text" title="Group therapies" href="https://www.youtube.com/watch?v=avTnlyHwXzA&list=PL0lwT9W0zVph_uUC_it7z2k_N47MSotvU">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M10.713,13.719 C10.232,12.705,9.197,12,8,12H4c-1.657,0-3,1.343-3,3v5h2v7h6" stroke-linejoin="miter" stroke-linecap="butt"></path> <circle data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="6" cy="6" r="3" stroke-linejoin="miter"></circle> <path data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M21.287,13.719 C21.768,12.705,22.803,12,24,12h4c1.657,0,3,1.343,3,3v5h-2v7h-6" stroke-linejoin="miter" stroke-linecap="butt"></path> <circle data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="26" cy="6" r="3" stroke-linejoin="miter"></circle> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M19,31h-6v-8h-3v-7 c0-2.209,1.791-4,4-4h4c2.209,0,4,1.791,4,4v7h-3V31z" stroke-linejoin="miter"></path> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="16" cy="5" r="4" stroke-linejoin="miter"></circle></g></svg>
+
+                    Group Therapies
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Occupational therapy" href="https://www.youtube.com/playlist?list=PL0lwT9W0zVpjE-DmjB8iLJ-CFy4Y5uDN-">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path data-cap="butt" d="M15,8l-1,6,4.084.817a.5.5,0,0,1,.255.844L14,20" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></path> <circle cx="12" cy="3" r="2" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle> <polyline points="2 8 9 8 15 8 22 8" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></polyline> <line data-cap="butt" x1="9" y1="8" x2="9" y2="23" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></line></g></svg>
+
+
+                    Occupational
+                </a>
+
+
+                <a class="cm-menu-text" title="ABA Therapy" href="https://www.youtube.com/watch?v=OHWXU5cyrv8&list=PL0lwT9W0zVpgER0w710_PSETVXo_UcNap">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path d="M19,21h4V16.677a1,1,0,0,0-.629-.928l-3.742-1.5A1,1,0,0,1,18,13.323v-.878A3.982,3.982,0,0,0,20,9V7a4,4,0,0,0-6-3.465" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path> <path d="M14.371,16.749l-3.742-1.5A1,1,0,0,1,10,14.323v-.451C13.27,13.435,14,12,14,12s-2-2-2-4A4,4,0,0,0,4,8c0,2-2,4-2,4s.73,1.435,4,1.872v.451a1,1,0,0,1-.629.928l-3.742,1.5A1,1,0,0,0,1,17.677V21H15V17.677A1,1,0,0,0,14.371,16.749Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg>
+
+                    ABA Therapy
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Media's Darling" href="https://www.youtube.com/watch?time_continue=97&v=o0meHkN_dz8&feature=emb_title">
+
+                    <svg style="top: 3px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M21.243,3.757 c-2.343-2.343-6.142-2.343-8.485,0c-0.289,0.289-0.54,0.6-0.757,0.927c-0.217-0.327-0.469-0.639-0.757-0.927 c-2.343-2.343-6.142-2.343-8.485,0c-2.343,2.343-2.343,6.142,0,8.485L12,21.485l9.243-9.243C23.586,9.899,23.586,6.1,21.243,3.757z" stroke-linejoin="miter"></path></g></svg>
+
+                    Media's Darling
+                </a>
+
+
+                <a class="cm-menu-text" title="Telugu Ad #1" href="https://www.youtube.com/watch?v=_xteYSrmAHY&list=PL0lwT9W0zVpiLhGbr6newoQBl5-Rlcs8G&index=2">
+
+                    <img src="https://www.pinnacleblooms.org/images/pinnacle-logo-emblem-50.png" loading="lazy" alt="Pinnacle Blooms Network">
+
+                    Telugu Ad #1
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Innovations" href="https://www.youtube.com/watch?v=CWgQmR3_UhY&list=PL0lwT9W0zVpgcVGtxrUeDtD58JtrH00PK">
+
+                    <img src="https://www.pinnacleblooms.org/images/pinnacle-logo-emblem-50.png" loading="lazy" alt="Pinnacle Blooms Network">
+
+                    English Ad
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Assessments" href="https://www.youtube.com/watch?v=DVNPmQAvCUY&list=PL0lwT9W0zVph0A5YFRCw8WQEH5jTws3zW">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="3" y1="21" x2="6" y2="21" stroke-linejoin="miter"></line> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 6,17 1,17 1,3 6,3 " stroke-linejoin="miter"></polyline> <rect x="9" y="1" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" width="14" height="22" stroke-linejoin="miter"></rect> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="6" x2="18" y2="6" stroke-linejoin="miter"></line> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="10" x2="18" y2="10" stroke-linejoin="miter"></line> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="16" cy="16" r="2" stroke-linejoin="miter"></circle></g></svg>
+                    Assessments
+                </a>
+
+
+
+
+                <a class="cm-menu-text" title="Our Promise" href="https://www.youtube.com/watch?v=gpLkt0MVbPA&list=PL0lwT9W0zVpjuOdR_87e4mDEdC3zOnmlD&t=4s">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path d="M17,15h1.838a3,3,0,0,1,2.846,2.052L22,18,10.532,21.529a4,4,0,0,1-2.965-.246L1,18V11H2c1.105,0,3.906.438,5,2h3a4,4,0,0,1,4,4H8" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><path d="M19.2,1.812A2.7,2.7,0,0,0,15,2.24a2.7,2.7,0,0,0-4.2-.428,2.8,2.8,0,0,0,0,3.919L15,10l4.2-4.269A2.8,2.8,0,0,0,19.2,1.812Z" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></path></g></svg>
+
+                    Our Promise
+                </a>
+
+
+
+
+
+                <a class="cm-menu-text" title="Parent's Darling" href="https://www.youtube.com/watch?v=mRpcTIljONA&list=PL0lwT9W0zVpgS5owpJUO174UGpfmxv9Ho">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><circle cx="16" cy="20" r="3" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></circle><circle cx="8.5" cy="4.5" r="3.5" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle><polyline points="12 31 12 26 20 26 20 31" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></polyline><line x1="6" y1="22" x2="12" y2="26" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></line><line x1="26" y1="22" x2="20" y2="26" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" data-color="color-2" stroke-linejoin="miter"></line><path d="M1,25V17a6,6,0,0,1,6-6h3a5.977,5.977,0,0,1,4,1.528" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path><circle cx="23.5" cy="4.5" r="3.5" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></circle><path d="M31,25V17a6,6,0,0,0-6-6H22a5.977,5.977,0,0,0-4,1.528" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg>
+
+                    Parent's Darling
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Speech Therapy" href="https://www.youtube.com/playlist?list=PL0lwT9W0zVpggtg4EjReDxF7U_hddJ62M">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M1,29h2 c1.1,0,2-0.9,2-2v-2l-2.4-1.2c-1.5-0.7-1.5-2.8,0-3.6L5,19v-2l3.6-1.4c0.7-0.3,0.8-1.1,0.3-1.6L5,10V3" stroke-linejoin="miter"></path> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M10,23l4-5V9 c0-1.7,1.3-3,3-3h11c1.7,0,3,1.3,3,3v11c0,1.7-1.3,3-3,3H10z" stroke-linejoin="miter"></path> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="19" y1="12" x2="26" y2="12" stroke-linejoin="miter"></line> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="19" y1="17" x2="26" y2="17" stroke-linejoin="miter"></line></g></svg>
+
+                    Speech Therapy
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Special Education" href="https://www.youtube.com/playlist?list=PL0lwT9W0zVph_2gMj-nx8J7Grb59gZCkr">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 28,7 31,7 31,29 1,29 1,7 4,7 " stroke-linejoin="miter"></polyline> <line data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" x1="16" y1="7" x2="16" y2="25" stroke-linejoin="miter" stroke-linecap="butt"></line> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M16,7c0,0-2.167-4-12-4v18 c6.937,0,12,4,12,4s4.812-4,12-4V3C18.083,3,16,7,16,7z" stroke-linejoin="miter"></path></g></svg>
+
+                    Special Education
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Behavioral Therapy" href="https://www.youtube.com/playlist?list=PL0lwT9W0zVpiek5-R7o90GMIcVSz0A-uM">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><path data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M19.992,18.737L22.2,20.4 c0.504,0.378,0.8,0.97,0.8,1.6v1h-8v-1c0-0.63,0.296-1.222,0.8-1.6l2.208-1.663" stroke-linejoin="miter" stroke-linecap="butt"></path> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M19,19L19,19 c-1.105,0-2-0.895-2-2v-1c0-1.105,0.895-2,2-2h0c1.105,0,2,0.895,2,2v1C21,18.105,20.105,19,19,19z" stroke-linejoin="miter"></path> <path data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M5.992,5.737L8.2,7.4 C8.704,7.778,9,8.37,9,9v1H1V9c0-0.63,0.296-1.222,0.8-1.6l2.208-1.663" stroke-linejoin="miter" stroke-linecap="butt"></path> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M5,6L5,6 C3.895,6,3,5.105,3,4V3c0-1.105,0.895-2,2-2h0c1.105,0,2,0.895,2,2v1C7,5.105,6.105,6,5,6z" stroke-linejoin="miter"></path> <polyline data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" points="13,5 21,5 21,10 " stroke-linejoin="miter" stroke-linecap="butt"></polyline> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 16,2 13,5 16,8 " stroke-linejoin="miter"></polyline> <polyline data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" points="11,19 3,19 3,14 " stroke-linejoin="miter" stroke-linecap="butt"></polyline> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 8,22 11,19 8,16 " stroke-linejoin="miter"></polyline></g></svg>
+
+                    Behavioral
+                </a>
+
+
+
+
+                <a class="cm-menu-text" title="Innovations" href="/innovation">
+
+                    <svg style="height: 22px;width: 20px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="12" x2="3" y2="12" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="4.222" y1="4.222" x2="5.636" y2="5.636" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="12" y1="1" x2="12" y2="3" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="19.778" y1="4.222" x2="18.364" y2="5.636" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="23" y1="12" x2="21" y2="12" stroke-linejoin="miter"></line> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M18,12c0-3.314-2.686-6-6-6 s-6,2.686-6,6c0,2.611,1.671,4.827,4,5.651V22h4v-4.349C16.329,16.827,18,14.611,18,12z" stroke-linejoin="miter"></path></g></svg>
+
+                    Innovations
+                </a>
+
+
+
+
+
+                <a class="cm-menu-text" title="Telugu Ad #2" href="https://www.youtube.com/watch?v=_xteYSrmAHY&list=PL0lwT9W0zVpiLhGbr6newoQBl5-Rlcs8G&index=2">
+
+                    <img src="https://www.pinnacleblooms.org/images/pinnacle-logo-emblem-50.png" loading="lazy" alt="Pinnacle Blooms Network">
+
+                    Telugu Ad #2
+                </a>
+
+
+
+                <a class="cm-menu-text" title="Pinnacle Shorts" href="https://www.youtube.com/watch?v=FntpUgM6SDM&list=PL0lwT9W0zVphSworIQqJhYZVv-Cytqbhd">
+
+                    <img src="https://www.pinnacleblooms.org/images/pinnacle-logo-emblem-50.png" loading="lazy" alt="Pinnacle Blooms Network">
+
+                    Pinnacle Shorts
+                </a>
+
+
+            </div>
+            <h3 class="fmenu-title">
+
+                <a href="https://www.pinnacleblooms.org/speech-aba-autism-assessments" class="menu-side-title" title="franchise">  <svg style="height: 28px;width: 28px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><rect x="11" y="1" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" width="20" height="30" stroke-linejoin="miter"></rect> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="18" y1="8" x2="24" y2="8" stroke-linejoin="miter"></line> <line fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="18" y1="13" x2="24" y2="13" stroke-linejoin="miter"></line> <circle fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" cx="21" cy="21" r="3" stroke-linejoin="miter"></circle> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="4" y1="27" x2="7" y2="27" stroke-linejoin="miter"></line> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 7,23 1,23 1,5 7,5 " stroke-linejoin="miter"></polyline></g></svg> Assessments</a>
+            </h3>
+            <div class="content">
+
+                <a class="cm-menu-text full" title="Short Sensory profile " aria-label="Short Sensory profile" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#why-section">
+                    Short Sensory profile
+                </a>
+
+
+                <a class="cm-menu-text" title="Childhood autism spectrum test" aria-label="Childhood autism spectrum test" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#why-section">
+                    Childhood autism spectrum test
+                </a>
+
+
+                <a class="cm-menu-text full" title="Autism Spectrum Screening Questionnaire " aria-label="Autism Spectrum Screening Questionnaire" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#why-section">
+                    Autism Spectrum Screening Questionnaire
+                </a>
+
+
+                <a class="cm-menu-text full" title="Pinnacle ISAA-Indian Scale for Assessment of Autism" aria-label="Pinnacle ISAA-Indian Scale for Assessment of Autism" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#what-section">Pinnacle ISAA-Indian Scale for Assessment of Autism</a>
+
+
+
+                <a class="cm-menu-text full" title="Ritvo Autism Asperger Diagnostic Scale" aria-label="Ritvo Autism Asperger Diagnostic Scale" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#Advantages-section">Ritvo Autism Asperger Diagnostic Scale</a>
+
+
+                <a class="cm-menu-text full" title="Social Skills Milestones" aria-label="Social Skills Milestones" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#ChildrenServices-section">Social Skills Milestones</a>
+
+
+
+                <a class="cm-menu-text full" title="Beck hopelessness scale" aria-label="Beck hopelessness scale" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#ChildrenServices-section">Beck hopelessness scale</a>
+
+            </div>
+
+			<h3 class="fmenu-title">
+
+                <a href="https://www.pinnacleblooms.org/research-studies" class="menu-side-title" title="Peer-reviewed, clinical, and observational research validating Pinnacle’s innovations">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="1"><g stroke-width="1" transform="translate(0.5, 0.5)"><line x1="18.192" y1="15.054" x2="16.692" y2="12.456" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line><polygon points="8.594 4.429 13.79 1.43 19.29 10.956 16.692 12.456 14.093 13.956 8.594 4.429" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></polygon><path data-cap="butt" d="M6.693,23.772,5.4,21.829A9,9,0,0,1,8.433,9.243h0l7.422-4.236" fill="none" stroke="#444444" stroke-miterlimit="10" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></path><line data-color="color-2" x1="16.991" y1="22.675" x2="25.522" y2="17.75" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></line><path d="M28,31H4V28.5a5.5,5.5,0,0,1,11,0L14.945,31" fill="none" stroke="#444444" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1" stroke-linejoin="miter"></path></g></svg> Research Studies
+                </a>
+            </h3>
+            <div class="content">
+
+                <a class="cm-menu-text full" title="Official global reference document on autism policy, readiness, and innovation" aria-label="Official global reference document on autism policy, readiness, and innovation" href="https://www.pinnacleblooms.org/global-research-whitebook">
+                    Global Research White Book
+                </a>
+
+                <a class="cm-menu-text full" title="Validation study of AbilityScore® across countries, conditions, and demographics" aria-label="Validation study of AbilityScore® across countries, conditions, and demographics" href="https://www.pinnacleblooms.org/abilityscore-global-study">
+                    AbilityScore® Longitudinal Study
+                </a>
+
+                <a class="cm-menu-text full" title="Study on how SEVA™ transformed therapy access for financially challenged children" aria-label="Study on how SEVA™ transformed therapy access for financially challenged children" href="https://www.pinnacleblooms.org/seva-impact-study">
+                    SEVA™ Impact Study
+                </a>
+
+                <a class="cm-menu-text full" title="Real-world study validating AI-personalized therapy sessions using TherapeuticAI®" aria-label="Real-world study validating AI-personalized therapy sessions using TherapeuticAI®" href="https://www.pinnacleblooms.org/therapeuticai-effectiveness-study">
+                    TherapeuticAI® Effectiveness Study
+                </a>
+
+                <a class="cm-menu-text full" title="Research proving the success of Pinnacle's Everyday Therapy™ programs for home use" aria-label="Research proving the success of Pinnacle's Everyday Therapy™ programs for home use" href="https://www.pinnacleblooms.org/everyday-therapy-home-study">
+                    Everyday Therapy™ Home Integration Study
+                </a>
+
+                <a class="cm-menu-text full" title="Study on therapy outcomes across Telugu, Hindi, Kannada, English, and more" aria-label="Study on therapy outcomes across Telugu, Hindi, Kannada, English, and more" href="https://www.pinnacleblooms.org/multilingual-therapy-outcomes">
+                    Multilingual Therapy Outcomes Study
+                </a>
+
+                <a class="cm-menu-text full" title="Scientific outcomes on child readiness for school after therapy" aria-label="Scientific outcomes on child readiness for school after therapy" href="https://www.pinnacleblooms.org/school-readiness-study">
+                    School Readiness & Inclusion Study
+                </a>
+
+                <a class="cm-menu-text full" title="Pinnacle's proprietary equity scoring index for child therapy accessibility" aria-label="Pinnacle's proprietary equity scoring index for child therapy accessibility" href="https://www.pinnacleblooms.org/seva-index">
+                    SEVA™ Social Equity Index Study
+                </a>
+
+                <a class="cm-menu-text full" title="Research on therapist emotional health and the empathy-first Pinnacle model" aria-label="Research on therapist emotional health and the empathy-first Pinnacle model" href="https://www.pinnacleblooms.org/therapist-burnout-empathy">
+                    Therapist Burnout & Empathy Study
+                </a>
+
+                <a class="cm-menu-text full" title="Research on how AbilityScore® predicts therapy needs and long-term outcomes" aria-label="Research on how AbilityScore® predicts therapy needs and long-term outcomes" href="https://www.pinnacleblooms.org/abilityscore-predictive-study">
+                    AbilityScore® Predictive Validity Study
+                </a>
+
+                <a class="cm-menu-text full" title="Data-backed study proving effectiveness of TherapySphere™ in real-world sessions" aria-label="Data-backed study proving effectiveness of TherapySphere™ in real-world sessions" href="https://www.pinnacleblooms.org/therapysphere-study">
+                    TherapySphere™ Sensory Environment Study
+                </a>
+
+                <a class="cm-menu-text full" title="Study focused on how therapy improves a child’s ability to understand and respond" aria-label="Study focused on how therapy improves a child’s ability to understand and respond" href="https://www.pinnacleblooms.org/question-comprehension-study">
+                    Question Comprehension Improvement Study
+                </a>
+
+
+                <a class="cm-menu-text full" title="Research on how parents help generalize therapy learnings at home and in daily life" aria-label="Research on how parents help generalize therapy learnings at home and in daily life" href="https://www.pinnacleblooms.org/parent-led-generalization">
+                    Parent-Led Generalization Study
+                </a>
+
+            </div>
+
+            <h3 class="fmenu-title">
+
+                <a href="https://www.pinnacleblooms.org/franchise-autism-therapy-center" title="franchise">Franchise Opportunity</a>
+            </h3>
+            <div class="content">
+
+                <a class="cm-menu-text full" title="What is Pinnacle Blooms Network Franchise" aria-label="What is Pinnacle Franchise Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#what-section">What is Pinnacle Franchise</a>
+
+
+                <a class="cm-menu-text full" title="Why Franchise with us ? " aria-label="Why Franchise with us Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#why-section">Why Franchise with us ? </a>
+
+
+                <a class="cm-menu-text full" title="Advantages of our Franchise" aria-label="Advantages of our Franchise Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#Advantages-section">Advantages of our Franchise</a>
+
+
+                <a class="cm-menu-text full" title="Eligibility for our Franchise network" aria-label="Eligibility for our Franchise network Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#ChildrenServices-section">Eligibility for our Franchise network</a>
+
+
+                <a class="cm-menu-text full" title="application process" aria-label="application process Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#adultservices-section">application process</a>
+
+
+                <a class="cm-menu-text full" title="Franchise network cost" aria-label="Franchise network cost Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#assessment-section">Franchise Network cost</a>
+
+
+                <a class="cm-menu-text full" title="Our network franchise" aria-label="Our network franchise Section" href="https://www.pinnacleblooms.org/franchise-autism-therapy-center#statutory-section">
+                    Our network franchise
+                </a>
+
+            </div>
+
+
+
+            <h3 class="fmenu-title">Our Reach Across Globe</h3><div class="content">
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Suchitra, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100222183" href="tel:9100222183">
+                            9100222183
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Kukatpally, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100222184" href="tel:9100222184">
+                            9100222184
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 SR Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100222185" href="tel:9100222185">
+                            9100222185
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Begumpet, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100222186" href="tel:9100222186">
+                            9100222186
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Himayat Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100222188" href="tel:9100222188">
+                            9100222188
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Labbipet, Vijayawada - Andhra Pradesh   </a> -
+                        <a title="call us on 8885027293" href="tel:8885027293">
+                            8885027293
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Visakhapatnam, Vizag - Andhra Pradesh   </a> -
+                        <a title="call us on 7386395212" href="tel:7386395212">
+                            7386395212
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Dilsukhnagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9738179179" href="tel:9738179179">
+                            9738179179
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Gachibowli, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9063377417" href="tel:9063377417">
+                            9063377417
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Guntur, Guntur - Andhra Pradesh   </a> -
+                        <a title="call us on 9804435444" href="tel:9804435444">
+                            9804435444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 NAD, Vizag, Vizag - Andhra Pradesh   </a> -
+                        <a title="call us on 7386947444" href="tel:7386947444">
+                            7386947444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Karimnagar, Karimnagar - Telangana   </a> -
+                        <a title="call us on 9908792374" href="tel:9908792374">
+                            9908792374
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Nallagandla, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9908793867" href="tel:9908793867">
+                            9908793867
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Nellore, Nellore - Andhra Pradesh   </a> -
+                        <a title="call us on 9908792438" href="tel:9908792438">
+                            9908792438
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Pragathi Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9908792553" href="tel:9908792553">
+                            9908792553
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Attapur, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9618222944" href="tel:9618222944">
+                            9618222944
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Eluru, Eluru - Andhra Pradesh   </a> -
+                        <a title="call us on 9618222544" href="tel:9618222544">
+                            9618222544
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Gajuwaka, Vizag - Andhra Pradesh   </a> -
+                        <a title="call us on 9618666344" href="tel:9618666344">
+                            9618666344
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Warangal, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9618666144" href="tel:9618666144">
+                            9618666144
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Khammam, Khammam - Telangana   </a> -
+                        <a title="call us on 9100053004" href="tel:9100053004">
+                            9100053004
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Kurnool, Kurnool - Andhra Pradesh   </a> -
+                        <a title="call us on 9491507444" href="tel:9491507444">
+                            9491507444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Kakinada, Kakinada - Andhra Pradesh   </a> -
+                        <a title="call us on 8125762999" href="tel:8125762999">
+                            8125762999
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Bhimavaram, Bhimavaram - Andhra Pradesh   </a> -
+                        <a title="call us on 9581208816" href="tel:9581208816">
+                            9581208816
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Khajaguda, Mehdipatnam, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100442037" href="tel:9100442037">
+                            9100442037
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Uppal, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100909484" href="tel:9100909484">
+                            9100909484
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Santosh Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9908792863" href="tel:9908792863">
+                            9908792863
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Vijayawada, Vijayawada - Andhra Pradesh   </a> -
+                        <a title="call us on 9347080640" href="tel:9347080640">
+                            9347080640
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Marathahalli, Bengaluru - Karnataka   </a> -
+                        <a title="call us on 9900428508" href="tel:9900428508">
+                            9900428508
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Rajhamundary, Rajhamundary - Andhra Pradesh   </a> -
+                        <a title="call us on 9100085004" href="tel:9100085004">
+                            9100085004
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Chanda Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 8985951444" href="tel:8985951444">
+                            8985951444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 East Marredpally, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100095004" href="tel:9100095004">
+                            9100095004
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Kadapa, Kadapa - Andhra Pradesh   </a> -
+                        <a title="call us on 9121116845" href="tel:9121116845">
+                            9121116845
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Srikakulam, Srikakulam - Andhra Pradesh   </a> -
+                        <a title="call us on 9121116846" href="tel:9121116846">
+                            9121116846
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Ongole, Ongole - Andhra Pradesh   </a> -
+                        <a title="call us on 9121116844" href="tel:9121116844">
+                            9121116844
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Miryalaguda, Miryalaguda - Andhra Pradesh   </a> -
+                        <a title="call us on 9100945515" href="tel:9100945515">
+                            9100945515
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Ananthapuram, Anathapuram - Andhra Pradesh   </a> -
+                        <a title="call us on 9848025444" href="tel:9848025444">
+                            9848025444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Tirupati, Tirupati - Andhra Pradesh   </a> -
+                        <a title="call us on 9100110284" href="tel:9100110284">
+                            9100110284
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 LB Nagar, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9573056244" href="tel:9573056244">
+                            9573056244
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 New Delhi, New Delhi - Delhi   </a> -
+                        <a title="call us on 9804489444" href="tel:9804489444">
+                            9804489444
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Indira Nagar, Bengaluru - Karnataka   </a> -
+                        <a title="call us on 9100222187" href="tel:9100222187">
+                            9100222187
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Nizamabad, Hyderabd - Telangana   </a> -
+                        <a title="call us on 7671816868" href="tel:7671816868">
+                            7671816868
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Nizampet, Hyderabad - Telangana   </a> -
+                        <a title="call us on 9100086004" href="tel:9100086004">
+                            9100086004
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Nandyala, Nandyala - Andhra Pradesh   </a> -
+                        <a title="call us on 9100056004" href="tel:9100056004">
+                            9100056004
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Mahbubnagar, Mahbubnagar - Telangana   </a> -
+                        <a title="call us on 9100677374" href="tel:9100677374">
+                            9100677374
+                        </a>
+                    </span>
+                    <span class="cm-menu-text full">
+                        <a href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window"> 📍 Vidyanagar, Vidyanagar - Telangana   </a> -
+                        <a title="call us on 9100488698" href="tel:9100488698">
+                            9100488698
+                        </a>
+                    </span>
+
+            </div>
+
+
+            <h3 class="fmenu-title">Our Community</h3><div class="content">
+
+                <a class="cm-menu-text" href="https://www.facebook.com/pinnacleblooms.org/" target="_blank" title="Facebook opens in new window">  Facebook</a>
+                <a class="cm-menu-text" href="https://twitter.com/pinnacleblooms" target="_blank" title="Twitter opens in new window">  Twitter</a>
+                <a class="cm-menu-text" href="https://www.instagram.com/autism.pinnacleblooms_org/" target="_blank" title="Instagram opens in new window">  Instagram</a>
+                <a class="cm-menu-text" href="https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ/featured" target="_blank" title="YouTube opens in new window">  YouTube </a>
+                <a class="cm-menu-text" href="https://www.linkedin.com/company/pinnacleblooms/">  LinkedIn</a>
+            </div>
+
+            <a href="https://www.bhclpl.org" class="copy-right-menu" title="Unit of Bharath HealthCare P Limited">Unit of Bharath HealthCare P Limited</a>
+
+            <div class="content policies">
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/privacy-policy">
+                    Policies
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/terms-of-use">
+                    Terms &amp; Conditions
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/age-restriction-policy">
+                    Age Restriction Policy
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/contact-information">
+                    Contact Information
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities">
+                    Disclaimer and Limitation of Liabilities
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/endorsement-and-testimonial">
+                    Endorsement and Testimonials
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/governing-and-jurisdiction">
+                    Governing Law and Jurisdiction
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/third-party-inegration">
+                    Third-Party Integration Policy
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/shipping-and-delivery-policy">
+                    Shipping and Delivery Policy
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/community-guidelines">
+                    Community Guidelines
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/accessibility-policy">
+                    Accessibility Policy
+                </a>
+
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/acceptable-use-policy">
+                    Acceptable Use Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/data-protection-policy">
+                    Data Protection Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/security-policy">
+                    Security Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/cancellation-policy">
+                    Cancellation Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/payment-and-billing">
+                    Payment and Billing
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/refund-policy">
+                    Refund Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/cookie-policy">
+                    Cookie Policy
+                </a>
+                <a class="cm-menu-text" href="https://www.pinnacleblooms.org/copyright-and-intellectual">
+                    Copyright and Intellectual
+                </a>
+				 <a class="cm-menu-text" href="/staff-declaration">
+                    Pinnacle Blooms Network Staff Conduct and HR Compliance Charter
+                </a>
+				<a class="cm-menu-text" href="/ethics-charter">
+                    Ethics Charter
+                </a>
+
+                <a href="https://www.bhclpl.org" class="cm-menu-text">
+                    <span>CIN-U74999TG2016PTC113063</span>
+                    <span>GST-36AAGCB9722P1Z2</span>
+                    <span>DIPP8651</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Toggle Menu Script -->
+    <script>
+        function toggleMenu() {
+    var menu = document.querySelector('.nav-fmenu');
+    var icon = document.getElementById('menu-icon');
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+        // Restore hamburger SVG
+        icon.innerHTML = '<line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line>';
+        icon.style.stroke = 'currentColor';
+    } else {
+        menu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // Switch to X icon
+        icon.innerHTML = '<line x1="6" x2="18" y1="6" y2="18"></line><line x1="6" x2="18" y1="18" y2="6"></line>';
+        icon.style.stroke = '#e4115e';
+    }
+}
+    </script>
+</body>
+</html>

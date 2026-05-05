@@ -203,7 +203,9 @@ console.log("✔ Assets copied");
 
 /* LOAD TEMPLATE PARTS */
 const template = read(TEMPLATE);
-const header = read(path.join(LAYOUT, "header.html"));
+// const header = read(path.join(LAYOUT, "header.html"));
+const headerDesktop = read(path.join(LAYOUT, "pinnacle-header.html"));
+const headerMobile = read(path.join(LAYOUT, "pinnacle-mobile-header.html"));
 // const footer = read(path.join(LAYOUT, "footer.html"));
 const footerDesktop = read(path.join(LAYOUT, "footer.html"));
 const footerMobile  = read(path.join(LAYOUT, "footer.mobile.html"));
@@ -220,6 +222,10 @@ for (const file of fs.readdirSync(PAGES)) {
    const footer = file.endsWith(".mobile.html")
     ? footerMobile
     : footerDesktop;
+
+      const header = file.endsWith(".mobile.html")
+    ? headerMobile
+    : headerDesktop;
   //  const pdfViewer = buildPdfViewer(pageName);
   //  const contentWithPdf = injectBeforeLastBlock(content, pdfViewer);
 
