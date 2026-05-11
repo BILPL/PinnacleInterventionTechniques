@@ -192,6 +192,14 @@ function buildSEO(page = "index") {
   return out;
 }
 
+
+function cleanPartial(html = "") {
+  return html
+    .replace(/<!DOCTYPE[^>]*>/gi, "")
+    .replace(/<\/?(html|head|body)[^>]*>/gi, "")
+    .trim();
+}
+
 /* ---------------- BUILD START ---------------- */
 console.log("🚀 Build started");
 
@@ -231,8 +239,8 @@ for (const file of fs.readdirSync(PAGES)) {
 
   const finalHtml = template
     .replace("{{SEO}}", buildSEO(pageName))
-    .replace("{{HEADER}}", header)
-    .replace("{{CONTENT}}", content)
+    .replace("{{HEADER}}", cleanPartial(header))
+    .replace("{{CONTENT}}", cleanPartial(content))
     .replace("{{FOOTER}}", footer);
 
   //fs.writeFileSync(path.join(BUILD, file), finalHtml);
