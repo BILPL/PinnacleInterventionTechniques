@@ -193,37 +193,43 @@ function buildSEO(page = "index") {
 }
 
 
-function cleanPartial(html = "") {
-  return html
-    .replace(/<!DOCTYPE[^>]*>/gi, "")
-    .replace(/<\/?(html|head|body)[^>]*>/gi, "")
-    .trim();
-}
 // function cleanPartial(html = "") {
 //   return html
-//     // Remove doctype
 //     .replace(/<!DOCTYPE[^>]*>/gi, "")
-
-//     // Remove html/head/body wrappers
 //     .replace(/<\/?(html|head|body)[^>]*>/gi, "")
-
-//     // Remove ALL title tags
-//     .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, "")
-
-//     // Remove meta tags
-//     .replace(/<meta\b[^>]*>/gi, "")
-
-//     // Remove canonical links
-//     .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
-
-//     // Remove other SEO link tags
-//     .replace(/<link\b[^>]*>/gi, "")
-
-//     // Remove JSON-LD scripts
-//     .replace(/<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/gi, "")
-
 //     .trim();
 // }
+function cleanPartial(html = "") {
+  return html
+    // Remove doctype
+    .replace(/<!DOCTYPE[^>]*>/gi, "")
+
+    // Remove html/head/body wrappers
+    .replace(/<\/?(html|head|body)[^>]*>/gi, "")
+
+    // Remove ALL title tags
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, "")
+
+    // Remove ONLY meta description tags
+    .replace(
+      /<meta\s+name=["']description["'][^>]*>/gi,
+      ""
+    )
+
+    // Remove ONLY canonical links
+    .replace(
+      /<link\b[^>]*rel=["']canonical["'][^>]*>/gi,
+      ""
+    )
+
+    // Remove JSON-LD scripts only
+    .replace(
+      /<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/gi,
+      ""
+    )
+
+    .trim();
+}
 
 /* ---------------- BUILD START ---------------- */
 console.log("🚀 Build started");
@@ -266,8 +272,8 @@ for (const file of fs.readdirSync(PAGES)) {
     .replace("{{SEO}}", buildSEO(pageName))
     .replace("{{HEADER}}", cleanPartial(header))
     .replace("{{CONTENT}}", cleanPartial(content))
-    .replace("{{FOOTER}}", footer);
-    // .replace("{{FOOTER}}", cleanPartial(footer));
+    // .replace("{{FOOTER}}", footer);
+    .replace("{{FOOTER}}", cleanPartial(footer));
 
   //fs.writeFileSync(path.join(BUILD, file), finalHtml);
   const minifiedHtml = minifyHTML(finalHtml);
