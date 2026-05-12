@@ -48,7 +48,7 @@
     {"tag": "meta", "name": "msapplication-starturl", "content": "https://pinnacleblooms.org"},
     {"tag": "meta", "name": "msapplication-navbutton-color", "content": "#0066cc"},
     {"tag": "meta", "name": "msapplication-task", "content": "name=Call Helpline;action-uri=tel:+919100181181;icon-uri=/favicon.ico"},
-    {"tag": "meta", "name": "msapplication-task", "content": "name=Book Assessment;action-uri=https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india-assessment;icon-uri=/favicon.ico"}
+    {"tag": "meta", "name": "msapplication-task", "content": "name=Book Assessment;action-uri=https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india;icon-uri=/favicon.ico"}
   ],
 
   "linkTags": [
