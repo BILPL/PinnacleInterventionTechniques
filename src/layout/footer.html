@@ -8994,4 +8994,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<script>
+document.body.addEventListener("click", function (e) {
+  const link = e.target.closest("a");
+
+  if (!link) return;
+
+  // match your target links
+  if (link.href && link.href.includes("pinnacleblooms.org/start")) {
+    e.preventDefault();
+
+    // scroll 200px
+    window.scrollBy({
+      top: 200,
+      behavior: "smooth"
+    });
+
+    // navigate after scroll
+    setTimeout(function () {
+      window.location.href = link.href;
+    }, 500);
+  }
+});
+</script>
 </footer>
