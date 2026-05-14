@@ -61,17 +61,17 @@ li,ul{margin:0;padding:0;list-style:none}
 .cm-h-bb-nav-bar{width:100% ;
     display: flex;
     align-items: center;}
-.cm-h-bb-nav-bar>li{width:16.5%;float:left;text-align:center;position:relative}
+/* .cm-h-bb-nav-bar>li{width:16.5%;float:left;text-align:center;position:relative} */
 /* .cm-h-bb-nav-bar>li{width:14%;float:left;text-align:center;position:relative} */
-/* .cm-h-bb-nav-bar>li {
-    width: 14%;
+.cm-h-bb-nav-bar>li {
+    /* width: 14%; */
     width: auto !important;
     float: none !important;
     position: relative !important;
     text-align: center !important;
     padding: 0px 20px !important;
     white-space: nowrap !important;
-} */
+}
 .cm-h-bb-nav-bar>li:first-child{text-align:left}
 .cm-h-bb-nav-bar>li>a{color:#8f2879;text-transform:uppercase;font-size:15px;padding:28px 2px 17px 2px;border-bottom:1px solid transparent;display:inline-block;width:100%;font-weight:bold}
 .cm-h-bb-nav-bar>li>a>span{display:inline-block;position:relative}
@@ -263,7 +263,90 @@ body {
     background: #fff !important;
 }
 /* ===== MEGA MENU 2-ROW 4-COL ===== */
+.cm-h-bottombar, .cm-h-bb-nav-bar { overflow: visible !important; }
+.cm-h-bb-nav-bar > li { position: relative; }
 
+.cm-h-bb-nav-bar > li > ul.mega-4col {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(8px);
+  /* transition: opacity .25s ease, transform .25s ease, visibility .25s; */
+  position: absolute; top: 100%; left: 0; z-index: 9999;
+  width: auto !important;
+  max-width: 1624px !important;
+    background-color: #f9f9fa;
+    z-index: 1010;
+    padding: 0 28px;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, .2);
+    left: 0;
+  
+}
+.cm-h-bb-nav-bar > li:hover > ul.mega-4col {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+}
+
+/* each section cell */
+.mega-4col > li {
+  padding: 20px 22px 18px !important;
+  border-right: 1px solid #e0d8e8;
+  border-bottom: 1px solid #e0d8e8;
+  float: none !important; width: auto !important;
+  margin: 0 !important; overflow: visible !important;
+}
+.mega-4col > li:nth-child(4n)   { border-right: none; }
+.mega-4col > li:nth-last-child(-n+4) { border-bottom: none; }
+
+/* section title link */
+.mega-4col > li > .section-title {
+
+  display: block;
+    color: #8f2879;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #e0d8e8;
+}
+.mega-4col > li > .section-title:hover { color: #411e75; }
+
+/* inner ul */
+.mega-4col > li > ul {
+  display: block !important; position: static !important;
+  background: transparent !important; box-shadow: none !important;
+  border: none !important; padding: 0 !important; width: auto !important;
+}
+
+/* inner li rows */
+.mega-4col > li > ul > li {
+  width: 100% !important; float: none !important;
+  display: block !important;
+  border-top: 1px solid #e9e5ee !important;
+  border-bottom: none !important;
+  margin: 0 !important; padding: 0 !important;
+  white-space: normal;
+}
+.mega-4col > li > ul > li:first-child { border-top: none !important; }
+
+/* sub-links */
+.mega-4col > li > ul > li > a {
+  /* display: block !important; padding: 7px 0 !important;
+  color: #411e75 !important; font-size: 12px !important;
+  font-weight: 400 !important; text-transform: none !important;
+  height: auto !important; line-height: 1.4 !important; */
+    padding: 0;
+    margin: 0;
+    display: block !important;;
+    height: 46px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #411e75 !important;
+    font-size: 13px;
+}
+.mega-4col > li > ul > li > a:hover { color: #8f2879 !important; }
 
     </style>
 <!-- </head> -->
@@ -380,7 +463,146 @@ body {
         <div class="cm-h-bottombar">
             <div class="cm-container">
                 <ul class="cm-h-bb-nav-bar">
-                      
+                      <!-- ══════════════════════════════════════
+             INTERVENTIONS TECHNIQUES — MEGA MENU
+             ══════════════════════════════════════ -->
+        <li class="link-0" title="Interventions Techniques">
+          <a href="https://interventions.pinnacleblooms.org">
+            <span>Interventions Techniques</span>
+          </a>
+ 
+          <ul class="mega-4col">
+ 
+            <!-- ── ROW 1 ── -->
+ 
+            <!-- COL 1: Sensory Processing -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/sensory-processing">Sensory Processing</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/tactile-challenges">Tactile Challenges</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/auditory-challenges">Auditory Challenges</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/visual-challenges">Visual Challenges</a></li>
+                <li><a href="#">Vestibular Challenges</a></li>
+                <li><a href="#">Proprioceptive Challenges</a></li>
+                <li><a href="#">Interoception and Smell/Taste</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 2: Communication -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/communication">Communication</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/pre-verbal-early-communication">Pre-Verbal and Early Communication</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/receptive-language">Receptive Language</a></li>
+                <li><a href="#">Expressive Language</a></li>
+                <li><a href="#">Social Communication and AAC</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 3: Social-Emotional -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/social-emotional-development">Social-Emotional Development</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/emotional-regulation">Emotional Regulation</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/anxiety-fears">Anxiety and Fears</a></li>
+                <li><a href="#">Social Skills</a></li>
+                <li><a href="#">Attachment and Self-Concept</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 4: Behavior -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/behavior">Behavior</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/understanding-preventing-behaviour">Understanding and Preventing Behavior</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/stimming-repetitive-behaviours">Stimming and Repetitive Behaviors</a></li>
+                <li><a href="#">Aggression Toward Others</a></li>
+                <li><a href="#">Self-Injurious Behavior</a></li>
+                <li><a href="#">Other Challenging Behaviors</a></li>
+                <li><a href="#">Attention and Sleep</a></li>
+              </ul>
+            </li>
+ 
+            <!-- ── ROW 2 ── -->
+ 
+            <!-- COL 1: Daily Living Skills -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/daily-living-skills">Daily Living Skills</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/feeding-eating">Feeding and Eating</a></li>
+                <li><a href="https://interventions.pinnacleblooms.org/toileting">Toileting</a></li>
+                <li><a href="#">Dressing and Grooming</a></li>
+                <li><a href="#">Safety Skills</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 2: Motor Skills -->
+            <li>
+              <a class="section-title" href="#">Motor Skills</a>
+              <ul>
+                <li><a href="#">Gross Motor</a></li>
+                <li><a href="#">Fine Motor</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 3: Play and Cognitive Skills -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/play-and-cognitive-skills">Play and Cognitive Skills</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/play-skills">Play Skills</a></li>
+                <li><a href="#">Cognitive and Learning</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 4: School and Academic -->
+            <li>
+              <a class="section-title" href="#">School and Academic</a>
+              <ul>
+                <li><a href="#">School Readiness</a></li>
+                <li><a href="#">Academic Skills</a></li>
+                <li><a href="#">School Partnership</a></li>
+              </ul>
+            </li>
+ 
+            <!-- ── ROW 3 ── -->
+ 
+            <!-- COL 1: Transitions and Life Events -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/transitions-and-life-events">Transitions and Life Events</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/daily-transitions">Daily Transitions</a></li>
+                <li><a href="#">Major Life Events</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 2: Community and Outings -->
+            <li>
+              <a class="section-title" href="#">Community and Outings</a>
+              <ul>
+                <li><a href="#">Community Navigation</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 3: Family and Caregiver Support -->
+            <li>
+              <a class="section-title" href="#">Family and Caregiver Support</a>
+              <ul>
+                <li><a href="#">Parent and Caregiver Tools</a></li>
+              </ul>
+            </li>
+ 
+            <!-- COL 4: Therapy Implementation -->
+            <li>
+              <a class="section-title" href="https://interventions.pinnacleblooms.org/therapy-implementation">Therapy Implementation</a>
+              <ul>
+                <li><a href="https://interventions.pinnacleblooms.org/therapy-strategies-at-home">Therapy Strategies at Home</a></li>
+                <li><a href="#">Specific Intervention Areas</a></li>
+              </ul>
+            </li>
+ 
+          </ul>
+        </li>
+        <!-- ══ END MEGA MENU ══ -->
                     <li class="link-0" title="Autism Therapy">
                         <a href="https://www.pinnacleblooms.org/autism-therapy"><span id="autism-therapy-index-layout">Autism Therapy</span></a>
                         <ul>
