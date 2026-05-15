@@ -251,6 +251,10 @@
       gap: 3rem;
     }
   }
+
+  .card-wrapper.card-collapsed .chakra-stack {
+  display: none;
+}
 </style>
 <style>
     
@@ -9016,6 +9020,17 @@ document.body.addEventListener("click", function (e) {
       window.location.href = link.href;
     }, 500);
   }
+});
+
+document.addEventListener("click", function(e) {
+  const btn = e.target.closest('[data-testid="expand-card-button"]');
+  if (!btn) return;
+
+  const card = btn.closest('[data-card-id]').querySelector('.chakra-stack');
+  if (!card) return;
+
+  card.style.display =
+    card.style.display === "block" ? "none" : "block";
 });
 </script>
 </footer>
