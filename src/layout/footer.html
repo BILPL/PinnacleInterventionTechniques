@@ -9023,21 +9023,43 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
+</script>
+<script>
 document.addEventListener("click", function(e) {
-
   const btn = e.target.closest('[data-testid="expand-card-button"]');
   if (!btn) return;
+
+  e.preventDefault();
+  e.stopPropagation();
 
   const root = btn.closest('[data-card-id]');
   if (!root) return;
 
-  const content = root.querySelector('.chakra-stack');
-  if (!content) return;
+  // Try multiple possible content containers
+  const content =
+    root.querySelector('[data-testid="card-content"]') ||
+    root.querySelector('[class*="cardBody"]') ||
+    root.querySelector('[class*="card-body"]') ||
+    root.querySelector('[class*="collapse"]') ||
+    root.querySelector('[class*="Collapse"]');
 
-  const isOpen = content.style.display === "block";
+  if (!content) {
+    // Fallback: toggle all direct children except the header
+    const header = btn.closest('[data-testid="card-header"]') || btn.parentElement;
+    Array.from(root.children).forEach(child => {
+      if (!child.contains(btn)) {
+        const isHidden = child.style.display === "none" ||
+                         getComputedStyle(child).display === "none";
+        child.style.display = isHidden ? "" : "none";
+      }
+    });
+    return;
+  }
 
-  content.style.display = isOpen ? "none" : "block";
-
+  // Toggle using computed style (works even with CSS classes)
+  const isHidden = getComputedStyle(content).display === "none" ||
+                   content.style.display === "none";
+  content.style.display = isHidden ? "block" : "none";
 });
 </script>
 </footer>
