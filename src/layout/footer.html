@@ -8030,6 +8030,7 @@ svg.solid {
 .cm-f-l-block div:first-child svg.fill * {
     fill: #7437a7;
 }
+
 </style>
 
 
@@ -9023,14 +9024,20 @@ document.body.addEventListener("click", function (e) {
 });
 
 document.addEventListener("click", function(e) {
+
   const btn = e.target.closest('[data-testid="expand-card-button"]');
   if (!btn) return;
 
-  const card = btn.closest('[data-card-id]').querySelector('.chakra-stack');
-  if (!card) return;
+  const root = btn.closest('[data-card-id]');
+  if (!root) return;
 
-  card.style.display =
-    card.style.display === "block" ? "none" : "block";
+  const content = root.querySelector('.chakra-stack');
+  if (!content) return;
+
+  const isOpen = content.style.display === "block";
+
+  content.style.display = isOpen ? "none" : "block";
+
 });
 </script>
 </footer>
